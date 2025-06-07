@@ -1,36 +1,15 @@
+/* Fonte e base */
 body {
-    
-      }      
-
-.berkshire-swash-regular {
-    font-family: "Berkshire Swash", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-  
-.tagesschrift-regular {
-    font-family: "Tagesschrift", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-.merriweather-p {
-    font-family: "Merriweather", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-  }
-
-body, html {
+  font-family: 'Berkshire Swash', cursive;
+  background-color: #1a1a1a;
+  color: #f4f4f4;
   margin: 0;
   padding: 0;
-  height: 100%;
-  overflow-x: hidden;
+  line-height: 1.6;
 }
 
-.background-image {
+/* Imagem de fundo */
+.background-image img {
   position: fixed;
   top: 0;
   left: 0;
@@ -45,32 +24,110 @@ body, html {
   transition: transform 0.1s ease-out;
 }
 
-.content {
-  position: relative;
-  z-index: 1;
-  padding: 100px 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para o conteúdo */
+/* Título principal */
+.title-page {
+  text-align: center;
+  font-size: 3rem;
+  color: #ffd700;
+  margin: 30px 0;
+  text-shadow: 2px 2px #000;
 }
 
-.image-guardian {
-    display: flex;
-    justify-content: center;
-    
+/* Seção de introdução */
+.start {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
 }
 
-.title-page{
-    font-family: "Berkshire Swash", serif;
-    display: block;
-    justify-content: center;
+.start p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.start a {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 10px 15px;
+  background-color: #8a2be2;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.start a:hover {
+  background-color: #6a1bbd;
+}
+
+/* Estrutura dos personagens */
+.guardian, .assassin, .DruidHealer, .archer, .FireMage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  background-color: #2e2e2e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+.character-image img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.character-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.character-content h1 {
+  font-size: 2rem;
+  margin-top: 0;
+  color: #ffcc00;
+}
+
+.character-content h2 {
+  margin-top: 20px;
+  color: #ffcc00;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
 }
 
 p {
-    font-family: "Merriweather", serif;
-    display: block;
-    justify-content: center;
+  margin-top: 10px;
 }
 
-.table1 {
-    border: 2;
-    border-color: rgb(102, 72, 72);
+/* Responsividade */
+@media (max-width: 768px) {
+  .guardian, .assassin, .DruidHealer, .archer, .FireMage {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .character-image img {
+    width: 100%;
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .start a {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
 }
