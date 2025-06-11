@@ -323,3 +323,12 @@ function endGame(){
     alert("You've defeated the Lich! Portal active. Congratulations!");
   } else alert("You escaped, but injured. Next start will be harder.");
 }
+
+const startRPGButton = document.getElementById("start-button");
+const startScreen = document.querySelector(".start-screen");
+const gameScreen = document.querySelector(".game-screen");
+
+startRPGButton.onclick = () => {
+  startScreen.classList.add("hidden");
+  gameScreen.classList.remove("hidden");
+};
