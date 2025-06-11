@@ -131,3 +131,115 @@ p {
     text-align: center;
   }
 }
+
+/* Start screen */
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#start-button {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background-color: #8a2be2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+#start-button:hover {
+  background-color: #6a1bbd;
+  transform: scale(1.05);
+}
+
+/* Game screen */
+.game-screen {
+  padding: 20px;
+}
+#scene img {
+  max-width: 300px;
+  display: block;
+  margin: 20px auto;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Fonte e base */
+body {
+  font-family: 'Berkshire Swash', cursive;
+  background-color: #1a1a1a;
+  color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+/* Imagem de fundo com efeito suave */
+.background-image img {
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  opacity: 0.2;
+  filter: blur(4px);
+  z-index: -1;
+}
+
+/* Start screen */
+.start-screen {
+  display: flex; justify-content: center; align-items: center;
+  height: 100vh;
+  animation: fadeInBg 1s ease-out;
+}
+
+@keyframes fadeInBg {
+  from { background-color: #000; }
+  to { background-color: #1a1a1a; }
+}
+
+#start-button {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background-color: #8a2be2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+#start-button:hover {
+  background-color: #6a1bbd;
+  transform: scale(1.05);
+}
+
+/* Game screen */
+.game-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.game-screen iframe {
+  width: 80%;
+  height: 90%;
+  border: none;
+  box-shadow: 0 0 20px #8a2be2;
+}
+
+/* Hidden helper */
+.hidden {
+  display: none;
+}
+
+.game-screen {
+  padding: 20px;
+  /* se quiser, insira aqui o fundo, fontes etc. do seu estilo original */
+}
