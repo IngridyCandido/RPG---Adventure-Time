@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>RPG - Adventure Time</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RPG — Land of Ooo</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="background-image">
@@ -22,7 +19,8 @@
       The Enchiridion is a legendary book within the Adventure Time universe, initially introduced as a guide for heroes. However, it possesses profound magical properties. When specific gems are inserted into designated slots within the book, it can open portals to various dimensions of the multiverse. This capability makes it an object of immense power and danger if misused.<br/>
       Given the Enchiridion's potential to access and possibly disrupt the multiverse, its theft alongside Princess Bubblegum's abduction raises significant concerns. The group seeking to rescue her must not only find the princess but also prevent the misuse of the Enchiridion to safeguard the balance of the multiverse.
     </p>
-    <a id="character1" href="#guardian">Pebble Stonewall</a>
+    
+  <a id="character1" href="#guardian">Pebble Stonewall</a>
     <a id="character2" href="#assassin">Kaela Shadowveil</a>
     <a id="character3" href="#DruidHealer">Merlírio, the Whisperer of Leaves</a>
     <a id="character4" href="#archer">Áster Duskwatch</a>
@@ -160,18 +158,89 @@
     <p>
       The group receives some information, leading you to suspect that the one who kidnapped her was the Lich. However, you are not strong enough to face him in your current condition. Do you want to go straight to the forest to gather equipment and resources to begin your search for her, or would you rather look for clues at the tavern?
     </p>
+    <div id="character-select">
+    <h2>Selecione seu personagem:</h2>
+    <select id="selectCharacter">
+      <option value="Pebble Stonewall">Pebble Stonewall</option>
+      <option value="Kaela Shadowveil">Kaela Shadowveil</option>
+      <option value="Merlírio">Merlírio</option>
+      <option value="Áster Duskwatch">Áster Duskwatch</option>
+      <option value="Dussekar Flame">Dussekar Flame</option>
+    </select>
+    <button id="startBtn">Começar Aventura</button>
   </div>
 
-  <div class="start-screen">
-    <h1 class="title-page">RPG Adventure</h1>
-    <button id="start-button">Start Game</button>
+  <div id="story" class="hidden">
+    <p id="storyText"></p>
+    <div id="options">
+      <button id="option1" class="option-btn"></button>
+      <button id="option2" class="option-btn"></button>
+    </div>
   </div>
 
-  <div class="game-screen hidden">
-    <div id="scene"></div>
-    <button id="next-button" class="hidden">Next</button>
+  <div id="battle" class="hidden">
+    <img id="enemyImage" src="" alt="Inimigo" />
+    <p><strong id="playerName"></strong> HP: <span id="playerHP"></span></p>
+    <p><strong id="enemyName"></strong> HP: <span id="enemyHP"></span></p>
+    <button id="attackBtn">Atacar</button>
+    <button id="defendBtn">Defender</button>
   </div>
 
-  <script src="script.js"></script>
+  <div id="dance" class="hidden">
+    <h2>Dança da Esperança 🎶</h2>
+    <p>Distribuam movimentos e cliquem em sequência!</p>
+    <div id="danceButtons">
+      <button class="dance-btn" data-move="head">Cabeça</button>
+      <button class="dance-btn" data-move="shoulders">Ombros</button>
+      <button class="dance-btn" data-move="knees">Joelhas</button>
+      <button class="dance-btn" data-move="feet">Pés</button>
+    </div>
+    <button id="startDanceBtn">Começar Dança</button>
+  </div>
+
+  <div id="hangman" class="hidden">
+    <h2>Palavra do Poder (Forca)</h2>
+    <p id="wordDisplay"></p>
+    <p>Erros restantes: <span id="errorsLeft"></span></p>
+    <div id="keyboard"></div>
+    <button id="restartHangmanBtn">Reiniciar Forca</button>
+  </div>
+  </div>
+
+  <div id="story" class="hidden">
+    <p id="storyText"></p>
+    <div id="options">
+      <button id="option1" class="option-btn"></button>
+      <button id="option2" class="option-btn"></button>
+    </div>
+  </div>
+
+  <div id="battle" class="hidden">
+    <img id="enemyImage" src="Magic Man.jpg" alt="Inimigo" />
+    <p><strong id="playerName"></strong> HP: <span id="playerHP"></span></p>
+    <p><strong id="enemyName"></strong> HP: <span id="enemyHP"></span></p>
+    <button id="attackBtn">Atacar</button>
+    <button id="defendBtn">Defender</button>
+  </div>
+
+  <div id="dance" class="hidden">
+    <h2>Dança da Esperança 🎶</h2>
+    <p>Distribuam movimentos e cliquem em sequência!</p>
+    <div id="danceButtons">
+      <button class="dance-btn" data-move="head">Cabeça</button>
+      <button class="dance-btn" data-move="shoulders">Ombros</button>
+      <button class="dance-btn" data-move="knees">Joelhas</button>
+      <button class="dance-btn" data-move="feet">Pés</button>
+    </div>
+    <button id="startDanceBtn">Começar Dança</button>
+  </div>
+
+  <div id="hangman" class="hidden">
+    <h2>Palavra do Poder (Forca)</h2>
+    <p id="wordDisplay"></p>
+    <p>Erros restantes: <span id="errorsLeft"></span></p>
+    <div id="keyboard"></div>
+    <button id="restartHangmanBtn">Reiniciar Forca</button>
+  </div>
 </body>
 </html>

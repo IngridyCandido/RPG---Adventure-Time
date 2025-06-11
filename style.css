@@ -1,4 +1,3 @@
-/* Fonte e base */
 body {
   font-family: 'Berkshire Swash', cursive;
   background-color: #1a1a1a;
@@ -8,7 +7,6 @@ body {
   line-height: 1.6;
 }
 
-/* Imagem de fundo */
 .background-image img {
   position: fixed;
   top: 0;
@@ -24,7 +22,6 @@ body {
   transition: transform 0.1s ease-out;
 }
 
-/* Título principal */
 .title-page {
   text-align: center;
   font-size: 3rem;
@@ -33,7 +30,6 @@ body {
   text-shadow: 2px 2px #000;
 }
 
-/* Seção de introdução */
 .start {
   max-width: 900px;
   margin: auto;
@@ -113,6 +109,7 @@ p {
 
 /* Responsividade */
 @media (max-width: 768px) {
+
   .guardian, .assassin, .DruidHealer, .archer, .FireMage {
     flex-direction: column;
     align-items: center;
@@ -123,13 +120,37 @@ p {
     max-width: 90%;
     margin-bottom: 20px;
   }
-
-  .start a {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    text-align: center;
-  }
+}
+.hidden {
+  display: none;
+}
+button, .option-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+#enemyImage {
+  width: 150px;
+  margin-top: 10px;
+}
+#danceButtons {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+.dance-btn {
+  padding: 15px;
+  flex: 1;
+}
+#keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  max-width: 400px;
+}
+#keyboard button {
+  width: 40px;
+  height: 40px;
 }
 
 /* Start screen */
@@ -167,79 +188,8 @@ p {
   margin: 20px auto;
   animation: fadeIn 1s;
 }
-
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.8); }
   to { opacity: 1; transform: scale(1); }
 }
 
-/* Fonte e base */
-body {
-  font-family: 'Berkshire Swash', cursive;
-  background-color: #1a1a1a;
-  color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  overflow: hidden;
-}
-
-/* Imagem de fundo com efeito suave */
-.background-image img {
-  position: fixed; top: 0; left: 0;
-  width: 100%; height: 100%;
-  opacity: 0.2;
-  filter: blur(4px);
-  z-index: -1;
-}
-
-/* Start screen */
-.start-screen {
-  display: flex; justify-content: center; align-items: center;
-  height: 100vh;
-  animation: fadeInBg 1s ease-out;
-}
-
-@keyframes fadeInBg {
-  from { background-color: #000; }
-  to { background-color: #1a1a1a; }
-}
-
-#start-button {
-  font-size: 2rem;
-  padding: 1rem 2rem;
-  background-color: #8a2be2;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s, background-color 0.3s;
-}
-#start-button:hover {
-  background-color: #6a1bbd;
-  transform: scale(1.05);
-}
-
-/* Game screen */
-.game-screen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.game-screen iframe {
-  width: 80%;
-  height: 90%;
-  border: none;
-  box-shadow: 0 0 20px #8a2be2;
-}
-
-/* Hidden helper */
-.hidden {
-  display: none;
-}
-
-.game-screen {
-  padding: 20px;
-  /* se quiser, insira aqui o fundo, fontes etc. do seu estilo original */
-}
